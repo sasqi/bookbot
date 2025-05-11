@@ -4,10 +4,7 @@ def get_book_text(filepath):
 
 def number_of_words(text):
     words = text.split()
-    num = 0
-    for n in words:
-        num += 1
-    return num 
+    return len(words)
 
 
 def main():
