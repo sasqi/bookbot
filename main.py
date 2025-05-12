@@ -14,12 +14,13 @@ def main():
     if len(sys.argv) < 2:
         sys.exit('Usage: python3 main.py <path_to_book>')
     else:
-        book_text = get_book_text(sys.argv[1])
+        book_path = sys.argv[1]
+        book_text = get_book_text(book_path)
         num_words = get_num_words(book_text)
         chars_dict = get_chars_dict(book_text)
         chars_sorted_list = chars_dict_to_sorted_list(chars_dict)
         print('============ BOOKBOT ============')
-        print(f'Analyzing book found at ./books/frankenstein.txt ...')
+        print(f'Analyzing book found at {book_path} ...')
         print('----------- Word Count ----------')
         print(f'Found {num_words} total words')
         print(f'--------- Character Count -------')
